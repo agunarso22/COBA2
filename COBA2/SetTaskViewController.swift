@@ -11,7 +11,6 @@ import UIKit
 class SetTaskViewController: UIViewController {
     
     @IBOutlet weak var taskTitleTextField: UITextField!
-   
     @IBOutlet weak var decsriptionTextField: UITextField!
     @IBOutlet weak var setTimestamp: UIDatePicker!
     
@@ -35,7 +34,7 @@ class SetTaskViewController: UIViewController {
         let timeTarget = setTimestamp.countDownDuration
         
         // check if time target is more than or equals to 15 minutes
-        if timeTarget < 0 {
+        if timeTarget == 0 {
             showToast(message: "Time target must be more than 0 minutes")
             return
         }
