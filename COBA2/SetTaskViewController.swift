@@ -14,6 +14,8 @@ class SetTaskViewController: UIViewController {
     @IBOutlet weak var decsriptionTextField: UITextField!
     @IBOutlet weak var setTimestamp: UIDatePicker!
     
+    let defaults = UserDefaults.standard
+    
     private var navigationManager = NavigationManager()
     
     override func viewDidLoad() {
@@ -24,28 +26,37 @@ class SetTaskViewController: UIViewController {
     // set error untuk text field
     @IBAction func setNewTaskButtonPressed(_ sender: Any) {
         
-        // check if task title is empty
-        if taskTitleTextField.text?.isEmpty == true {
-            showToast(message: "All field must be filled")
-            return
-        }
-        
-        
-        let timeTarget = setTimestamp.countDownDuration
-        
-        // check if time target is more than or equals to 15 minutes
-        if timeTarget == 0 {
-            showToast(message: "Time target must be more than 0 minutes")
-            return
-        }
-        
-        // add all data to user default
-        let goal = (taskTitle: taskTitleTextField.text ?? "", timeTarget: timeTarget)
+//        // check if task title is empty
+//        if taskTitleTextField.text?.isEmpty == true && decsriptionTextField.text?.isEmpty == true {
+//            showToast(message: "All field must be filled")
+//            return
+//        }
+//        
+//        
+//        let timeTarget = setTimestamp.countDownDuration
+//        
+//        // check if time target is more than or equals to 15 minutes
+//        if timeTarget == 0 {
+//            showToast(message: "Time target must be more than 0 minutes")
+//            return
+//        }
+//        
+//        // add all data to user default
+//        let goal = (taskTitle: taskTitleTextField.text ?? "", timeTarget: timeTarget)
+//        
+       
+        defaults.set(taskTitleTextField.text, forKey: "task")
+        defaults.set(decsriptionTextField.text, forKey: "desc")
+        defaults.set(setTimestamp.countDownDuration, forKey: "time")
+
+        print(defaults.string(forKey: "task"))
+        print(defaults.string(forKey: "desc"))
+        print(defaults.integer(forKey: "time"))
         
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        taskTitleTextField.borderStyle = UITextField.BorderStyle.roundedRect
+//        taskTitleTextField.borderStyle = UITextField.BorderStyle.roundedRect
     }
     
     func showToast(message: String){

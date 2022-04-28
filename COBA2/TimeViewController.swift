@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TimerViewController: UIViewController {
+class TimeViewController: UIViewController {
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
@@ -71,29 +71,33 @@ class TimerViewController: UIViewController {
         }
     }
 
+    @IBAction func unwindToHome(_ unwindSegue: UIStoryboardSegue) {
+        self.timer.invalidate()
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         self.timer.invalidate()
         // init alert dialog for delete confirmation
-        let alertDialog = UIAlertController(title: "Cancel the timer?", message: "Your recorded time will be cancelled", preferredStyle: .alert)
-
-        // Back button action handler
-        let backButton = UIAlertAction(title: "Back", style: .cancel, handler: {_ in
-            self.playPressed(self.playButton)
-        })
-
-        // Yes, delete button action handler
-        let confirmDeleteButton = UIAlertAction(title: "Yes, cancel", style: .destructive, handler: {
-            action in
-
-            self.navigationController?.popViewController(animated: true)
-            self.dismiss(animated: true, completion: nil)
-        })
-
-        alertDialog.addAction(backButton)
-        alertDialog.addAction(confirmDeleteButton)
-
-        // present alert dialog
-        self.present(alertDialog, animated: true, completion: nil)
+//        let alertDialog = UIAlertController(title: "Cancel the timer?", message: "Your recorded time will be cancelled", preferredStyle: .alert)
+//
+//        // Back button action handler
+//        let backButton = UIAlertAction(title: "Back", style: .cancel, handler: {_ in
+//            self.playPressed(self.playButton)
+//        })
+//
+//        // Yes, delete button action handler
+//        let confirmDeleteButton = UIAlertAction(title: "Yes, cancel", style: .destructive, handler: {
+//            action in
+//
+//            self.navigationController?.popViewController(animated: true)
+//        })
+//
+//        alertDialog.addAction(backButton)
+//        alertDialog.addAction(confirmDeleteButton)
+//
+//        // present alert dialog
+//        self.present(alertDialog, animated: true, completion: nil)
 
 
     }
@@ -143,3 +147,4 @@ class TimerViewController: UIViewController {
 //    }
 //
 }
+
