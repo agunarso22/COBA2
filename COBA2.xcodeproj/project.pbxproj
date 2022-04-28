@@ -17,6 +17,7 @@
 		82BBCC732818EE7F00BE450A /* View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCC722818EE7F00BE450A /* View Controller.swift */; };
 		82BBCC752819A34600BE450A /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCC742819A34600BE450A /* UserDefault.swift */; };
 		82BBCC772819C1D700BE450A /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCC762819C1D700BE450A /* TimeViewController.swift */; };
+		82BBCC79281A883D00BE450A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCC78281A883D00BE450A /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		82BBCC722818EE7F00BE450A /* View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Controller.swift"; sourceTree = "<group>"; };
 		82BBCC742819A34600BE450A /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		82BBCC762819C1D700BE450A /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		82BBCC78281A883D00BE450A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				82BBCC532817E17C00BE450A /* AppDelegate.swift */,
 				82BBCC552817E17C00BE450A /* SceneDelegate.swift */,
 				82BBCC592817E17C00BE450A /* Main.storyboard */,
+				82BBCC78281A883D00BE450A /* TableViewCell.swift */,
 				82BBCC722818EE7F00BE450A /* View Controller.swift */,
 				82BBCC762819C1D700BE450A /* TimeViewController.swift */,
 				82BBCC6B28180E8F00BE450A /* SetTaskViewController.swift */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82BBCC752819A34600BE450A /* UserDefault.swift in Sources */,
+				82BBCC79281A883D00BE450A /* TableViewCell.swift in Sources */,
 				82BBCC732818EE7F00BE450A /* View Controller.swift in Sources */,
 				82BBCC6C28180E8F00BE450A /* SetTaskViewController.swift in Sources */,
 				82BBCC542817E17C00BE450A /* AppDelegate.swift in Sources */,

@@ -13,6 +13,7 @@ class SetTaskViewController: UIViewController {
     @IBOutlet weak var taskTitleTextField: UITextField!
     @IBOutlet weak var decsriptionTextField: UITextField!
     @IBOutlet weak var setTimestamp: UIDatePicker!
+    @IBOutlet weak var newTaskTitle: UILabel!
     
     let defaults = UserDefaults.standard
     
