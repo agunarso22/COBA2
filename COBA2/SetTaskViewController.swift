@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class SetTaskViewController: UIViewController {
     
     @IBOutlet weak var taskTitleTextField: UITextField!
@@ -16,7 +17,7 @@ class SetTaskViewController: UIViewController {
     @IBOutlet weak var newTaskTitle: UILabel!
     
     let defaults = UserDefaults.standard
-    
+
     private var navigationManager = NavigationManager()
     
     override func viewDidLoad() {
